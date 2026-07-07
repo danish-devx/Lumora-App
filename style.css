@@ -515,12 +515,19 @@ body::after {
 
   .social-auth-row {
     flex-direction: column; 
-    gap: 10px;
+    gap: 12px; 
+    width: 100%;
   }
 
+ 
   .social-btn {
-    width: 100%; 
+    width: 100% !important; 
+    height: 48px !important; 
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
+  
 }
 
 
