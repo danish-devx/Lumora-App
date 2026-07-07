@@ -513,19 +513,18 @@ body::after {
     gap: 12px;
   }
 
-  .social-auth-row {
-    flex-direction: column; 
-    gap: 12px; 
-    width: 100%;
+  .auth-card .social-auth-row {
+    flex-direction: column !important; 
+    gap: 16px !important; 
+    display: flex !important;
+    width: 100% !important;
   }
 
- 
-  .social-btn {
+  .auth-card .social-auth-row .social-btn {
     width: 100% !important; 
-    height: 48px !important; 
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    min-height: 48px !important; 
+    height: 48px !important;
+    padding: 12px 0 !important; 
   }
   
 }
