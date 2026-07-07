@@ -30,7 +30,7 @@ async function handleForgotPassword(e) {
   
     const { data, error } = await client.auth.resetPasswordForEmail(email, {
        
-        redirectTo: 'http://127.0.0.1:5500/updatepassword.html',
+        redirectTo: 'https://lumora-app-green.vercel.app/updatepassword.html',
         
     });
 
