@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumora – Exclusive Access</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <div class="sphere sphere-1"></div>
+  <div class="sphere sphere-2"></div>
+
+  <div class="auth-wrapper">
+
+    <div class="auth-card-glowing-wrapper">
+      <div class="auth-card">
+
+
+        <div class="auth-header">
+          <div class="auth-brand">
+            <div class="brand-icon"><i class="fas fa-bolt"></i></div>
+            <span class="brand-name">Lumora</span>
+            <span class="brand-tag">VIP</span>
+          </div>
+
+
+          <div class="auth-tabs">
+            <button class="tab-btn active" onclick="switchAuth('login')">Sign In</button>
+            <button class="tab-btn" onclick="switchAuth('signup')">Register</button>
+          </div>
+        </div>
+
+
+        <form id="loginForm" class="auth-form dynamic-form active-form" action="#">
+
+          <div class="form-group">
+            <label for="loginEmail">Email Address</label>
+            <div class="input-wrapper">
+              <input type="email" id="loginEmail" placeholder="name@example.com" required>
+              <i class="fas fa-envelope"></i>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <div class="input-wrapper">
+              <input type="password" id="loginPassword" placeholder="••••••••" required>
+              <i class="fas fa-lock"></i>
+            </div>
+          </div>
+
+          <div class="form-utils">
+            <label class="remember-me">
+              <input type="checkbox">
+              <span class="custom-checkbox"></span>
+              <span class="label-text">Remember session</span>
+            </label>
+            <a href="forgot.html" class="forgot-link">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="auth-btn" id="LoginToDashboardBtn">
+            <span>Secure Access</span> <i class="fas fa-arrow-right"></i>
+          </button>
+
+        </form>
+
+
+        <form id="signupForm" class="auth-form dynamic-form" action="#">
+
+          <div class="form-group">
+            <label for="signupName">Full Name</label>
+            <div class="input-wrapper">
+              <input type="text" id="signupName" placeholder="Enter your full name" required>
+              <i class="fas fa-user"></i>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="signupEmail">Email Address</label>
+            <div class="input-wrapper">
+              <input type="email" id="signupEmail" placeholder="Enter your email address" required>
+              <i class="fas fa-envelope"></i>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="signupPassword">Password</label>
+            <div class="input-wrapper">
+              <input type="password" id="signupPassword" placeholder="Create strong password" required>
+              <i class="fas fa-lock"></i>
+            </div>
+          </div>
+
+          <div class="form-utils">
+            <label class="remember-me">
+              <input type="checkbox" required>
+              <span class="custom-checkbox"></span>
+              <span class="label-text">I accept the VIP Terms & Privacy</span>
+            </label>
+          </div>
+
+          <button type="submit" class="auth-btn" id="createAccountBtn">
+            <span>Create Account</span> <i class="fas fa-user-plus"></i>
+          </button>
+
+        </form>
+
+
+        <div class="divider">Or Connect Externally</div>
+
+        <div class="social-auth-row">
+          <button class="social-btn" id="google-login">
+            <i class="fab fa-google"></i> <span>Google</span>
+          </button>
+          <button class="social-btn" id="github-login">
+            <i class="fab fa-github"></i> <span>GitHub</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+  <script>
+    function switchAuth(formType) {
+      const loginForm = document.getElementById('loginForm');
+      const signupForm = document.getElementById('signupForm');
+      const tabs = document.querySelectorAll('.tab-btn');
+
+      tabs.forEach(tab => tab.classList.remove('active'));
+
+      if (formType === 'login') {
+        tabs[0].classList.add('active');
+        loginForm.classList.add('active-form');
+        signupForm.classList.remove('active-form');
+      } else {
+        tabs[1].classList.add('active');
+        signupForm.classList.add('active-form');
+        loginForm.classList.remove('active-form');
+      }
+    }
+  </script>
+
+</body>
+
+</html>

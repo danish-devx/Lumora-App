@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumora – Create New Post</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+  <link rel="stylesheet" href="addpost.css">
+</head>
+
+<body>
+
+
+  <div class="sphere sphere-1"></div>
+  <div class="sphere sphere-2"></div>
+
+  <div class="post-wrapper">
+
+    <div class="post-card-wrapper">
+      <div class="post-card">
+
+
+        <div class="auth-header" style="text-align: center; margin-bottom: 24px;">
+          <div class="auth-brand" style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <div class="brand-icon"
+              style="width: 38px; height: 38px; border-radius: 11px; background: #c8232a; display: flex; align-items: center; justify-content: center; font-size: 15px; color: #fff; box-shadow: 0 4px 15px rgba(200, 35, 42, 0.35); position: relative;">
+              <i class="fas fa-bolt"></i>
+              <span
+                style="content: ''; position: absolute; inset: 0; border-radius: 11px; box-shadow: 0 0 8px rgba(255,255,255,0.3) inset;"></span>
+            </div>
+            <span class="brand-name"
+              style="font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 700; color: #121215; letter-spacing: 1px; text-transform: uppercase;">Lumora</span>
+            <span class="brand-tag"
+              style="font-size: 9px; font-weight: 700; color: #c8232a; background: #fff2f2; border: 1px solid rgba(200, 35, 42, 0.2); border-radius: 4px; padding: 1px 6px; letter-spacing: 1.2px; margin-left: 2px;">VIP</span>
+          </div>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid #dfdfe5; margin-bottom: 24px; opacity: 0.6;">
+
+
+        <div class="post-header">
+          <a href="dashboard.html" class="back-feed-btn"><i class="fas fa-chevron-left"></i> Back to Feed</a>
+          <div class="post-title">
+            <h2>Create New Post</h2>
+            <p>Publish exclusive premium content to your Lumora timeline</p>
+          </div>
+        </div>
+
+
+        <form id="createPostForm" action="#" method="POST" enctype="multipart/form-data">
+
+
+          <div class="form-group">
+            <label>Upload Media File</label>
+            <div class="upload-dropzone" id="dropzone">
+              <input type="file" id="fileInput" accept="image/*" required>
+              <div class="dropzone-content" id="dropzoneContent">
+                <div class="upload-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                <h3>Drag & drop your luxury shot</h3>
+                <p>Supports PNG, JPG or WEBP up to 10MB</p>
+                <button type="button" class="browse-btn">Browse Files</button>
+              </div>
+
+              <img src="" alt="Preview" id="imagePreview" class="preview-img hidden">
+              <button type="button" id="removePreview" class="remove-preview-btn hidden"><i
+                  class="fas fa-times"></i></button>
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label for="postCaption">Write Caption</label>
+            <div class="textarea-wrapper">
+              <textarea id="postCaption" rows="5"
+                placeholder="Share the aesthetics, add hashtags, or tell your story..." required></textarea>
+              <div class="textarea-counter"><span id="charCount">0</span> / 2200</div>
+            </div>
+          </div>
+
+
+          <div class="post-actions">
+            <button type="button" class="btn-secondary" id="cancelBtn">Cancel</button>
+            <button type="submit" class="btn-primary">
+              <span>Publish Post</span> <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="addpost.js"></script>
+
+</body>
+
+</html>

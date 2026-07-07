@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumora – Account Recovery</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="forgot.css">
+</head>
+
+<body>
+
+
+    <div class="sphere sphere-1"></div>
+    <div class="sphere sphere-2"></div>
+
+    <div class="auth-wrapper">
+
+        <div class="auth-card-glowing-wrapper">
+            <div class="auth-card">
+
+
+                <div class="auth-header">
+                    <div class="auth-brand">
+                        <div class="brand-icon"><i class="fas fa-bolt"></i></div>
+                        <span class="brand-name">Lumora</span>
+                        <span class="brand-tag">VIP</span>
+                    </div>
+
+                    <div class="page-title">
+                        <h2>Recover Access</h2>
+                        <p>Enter your verified email to receive an executive security reset link</p>
+                    </div>
+                </div>
+
+
+                <form id="forgotPasswordForm" class="auth-form" action="#">
+
+                    <div class="form-group">
+                        <label for="recoveryEmail">Email Address</label>
+                        <div class="input-wrapper">
+                            <input type="email" id="recoveryEmail" placeholder="name@example.com" required>
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="auth-btn">
+                        <span>Send Reset Link</span> <i class="fas fa-paper-plane"></i>
+                    </button>
+
+                </form>
+
+
+                <div class="forgot-footer">
+                    <a href="index.html" class="back-portal-link">
+                        <i class="fas fa-chevron-left"></i> Back to Login Portal
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="forgot.js"></script>
+</body>
+
+</html>
