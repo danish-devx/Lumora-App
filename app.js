@@ -145,7 +145,7 @@ async function loginWithGoogle(e) {
     Swal.showLoading();
     await client.auth.signInWithOAuth({
         provider: 'google',
-        options: { redirectTo: 'http://127.0.0.1:5500/dashboard.html' }
+        options: { redirectTo: 'https://lumora-app-green.vercel.app/dashboard.html' }
     });
 }
 
@@ -154,7 +154,7 @@ async function loginWithGitHub(e) {
     Swal.showLoading(); 
     await client.auth.signInWithOAuth({
         provider: 'github',
-        options: { redirectTo: 'http://127.0.0.1:5500/dashboard.html' }
+        options: { redirectTo: 'https://lumora-app-green.vercel.app/dashboard.html' }
     });
 }
 
